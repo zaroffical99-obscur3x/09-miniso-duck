@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apply for admission at Zawia Academy - Best school in Islamabad offering quality education from Play Group to 2nd Year.">
+    <title>Admission - Zawia Academy | Apply Now</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a237e;
+            --primary-light: #3949ab;
+            --secondary: #ff6b35;
+            --secondary-light: #ff8c5a;
+            --accent: #ffd700;
+            --success: #00c853;
+            --text-dark: #2c3e50;
+            --bg-light: #ffffff;
+            --bg-gray: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-gray);
+            color: var(--text-dark);
+        }
+
+        /* Navigation */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid var(--primary);
+            box-shadow: 0 5px 20px rgba(26, 35, 126, 0.3);
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        .logo-text p {
+            font-size: 0.7rem;
+            color: var(--secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 30px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 10px;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: -3rem auto 4rem;
+            padding: 0 2rem;
+        }
+
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        /* Info Section */
+        .info-section {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-section h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .info-card {
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f8f9fa, white);
+            border-radius: 15px;
+            border-left: 4px solid var(--secondary);
+            transition: transform 0.3s;
+        }
+
+        .info-card:hover {
+            transform: translateX(10px);
+        }
+
+        .info-card h3 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .info-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .info-card li {
+            padding: 0.4rem 0;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .info-card li i {
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Admission Form */
+        .form-section {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 100px;
+        }
+
+        .form-section h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-section p {
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .form-group label span {
+            color: var(--secondary);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(26, 35, 126, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, var(--secondary), var(--secondary-light));
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+        }
+
+        .submit-btn i {
+            font-size: 1.3rem;
+        }
+
+        /* Process Steps */
+        .process-section {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            margin-top: 3rem;
+        }
+
+        .process-section h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .step {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #f8f9fa, white);
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+
+        .step:hover {
+            transform: translateY(-10px);
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 0 auto 1rem;
+        }
+
+        .step h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .step p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #0d1642;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .form-section {
+                position: static;
+            }
+
+            .steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-section">
+                <img src="zawia.png" alt="Zawia Academy" class="logo-img" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2245%22 fill=%22%231a237e%22/%3E%3Ctext x=%2250%22 y=%2260%22 font-size=%2240%22 fill=%22white%22 text-anchor=%22middle%22 font-weight=%22bold%22%3EZ%3C/text%3E%3C/svg%3E'">
+                <div class="logo-text">
+                    <h1>Zawia Academy</h1>
+                    <p>Admissions</p>
+                </div>
+            </a>
+            <nav id="nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="admission.html">Admission</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="mobile-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1><i class="fas fa-graduation-cap"></i> Admissions Open 2024-25</h1>
+        <p>Join Islamabad's premier educational institution</p>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="content-wrapper">
+            <!-- Info Section -->
+            <div class="info-section">
+                <h2>Admission Information</h2>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <h3><i class="fas fa-book-open"></i> Available Programs</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Play Group & Nursery</li>
+                            <li><i class="fas fa-check-circle"></i> KG & Prep</li>
+                            <li><i class="fas fa-check-circle"></i> Primary (Class 1-5)</li>
+                            <li><i class="fas fa-check-circle"></i> Middle (Class 6-8)</li>
+                            <li><i class="fas fa-check-circle"></i> Matric (Class 9-10)</li>
+                            <li><i class="fas fa-check-circle"></i> Intermediate (1st & 2nd Year)</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3><i class="fas fa-file-alt"></i> Required Documents</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Birth Certificate (Copy)</li>
+                            <li><i class="fas fa-check-circle"></i> Previous School Report Card</li>
+                            <li><i class="fas fa-check-circle"></i> 4 Passport Size Photos</li>
+                            <li><i class="fas fa-check-circle"></i> CNIC Copy (Guardian)</li>
+                            <li><i class="fas fa-check-circle"></i> Transfer Certificate (if applicable)</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3><i class="fas fa-star"></i> Why Choose Zawia?</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Expert & Qualified Faculty</li>
+                            <li><i class="fas fa-check-circle"></i> Modern Facilities</li>
+                            <li><i class="fas fa-check-circle"></i> Small Class Sizes</li>
+                            <li><i class="fas fa-check-circle"></i> Top Academic Results</li>
+                            <li><i class="fas fa-check-circle"></i> Safe Environment</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Campus Locations</h3>
+                        <ul>
+                            <li><i class="fas fa-building"></i> Main: Dhok Paracha, Islamabad</li>
+                            <li><i class="fas fa-building"></i> Campus 2: D-17 Near Water Filter</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Admission Form -->
+            <div class="form-section">
+                <h2>Apply for Admission</h2>
+                <p>Fill the form below and we'll contact you shortly</p>
+                <form id="admissionForm">
+                    <div class="form-group">
+                        <label>Student Name <span>*</span></label>
+                        <input type="text" id="studentName" placeholder="Enter student's full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Class Applying For <span>*</span></label>
+                        <select id="classApplying" required>
+                            <option value="">Select Class</option>
+                            <option value="Play Group">Play Group</option>
+                            <option value="Nursery">Nursery</option>
+                            <option value="KG">KG</option>
+                            <option value="Prep">Prep</option>
+                            <option value="Class 1">Class 1</option>
+                            <option value="Class 2">Class 2</option>
+                            <option value="Class 3">Class 3</option>
+                            <option value="Class 4">Class 4</option>
+                            <option value="Class 5">Class 5</option>
+                            <option value="Class 6">Class 6</option>
+                            <option value="Class 7">Class 7</option>
+                            <option value="Class 8">Class 8</option>
+                            <option value="Class 9">Class 9</option>
+                            <option value="Class 10">Class 10</option>
+                            <option value="1st Year">1st Year</option>
+                            <option value="2nd Year">2nd Year</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Parent/Guardian Name <span>*</span></label>
+                        <input type="text" id="parentName" placeholder="Enter parent's name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone Number <span>*</span></label>
+                        <input type="tel" id="phoneNumber" placeholder="+92 XXX-XXXXXXX" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Preferred Campus <span>*</span></label>
+                        <select id="campus" required>
+                            <option value="">Select Campus</option>
+                            <option value="Main Campus - Dhok Paracha">Main Campus - Dhok Paracha</option>
+                            <option value="Campus 2 - D-17">Campus 2 - D-17</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Additional Message</label>
+                        <textarea id="message" placeholder="Any additional information or questions..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <i class="fab fa-whatsapp"></i>
+                        Submit via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Process Steps -->
+        <div class="process-section">
+            <h2>Admission Process</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Apply Online</h3>
+                    <p>Fill out the admission form above with student details</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Assessment Test</h3>
+                    <p>Student will take a placement test at the campus</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Interview</h3>
+                    <p>Meet with admission counselor for discussion</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Enrollment</h3>
+                    <p>Submit documents and complete fee payment</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Zawia School and College. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('nav').classList.toggle('active');
+        }
+
+        document.getElementById('admissionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const studentName = document.getElementById('studentName').value;
+            const classApplying = document.getElementById('classApplying').value;
+            const parentName = document.getElementById('parentName').value;
+            const phoneNumber = document.getElementById('phoneNumber').value;
+            const campus = document.getElementById('campus').value;
+            const message = document.getElementById('message').value;
+
+            const whatsappNumber = "923171991742";
+            const whatsappMessage = `*🎓 NEW ADMISSION INQUIRY*%0A%0A*Student Name:* ${studentName}%0A*Class:* ${classApplying}%0A*Parent/Guardian:* ${parentName}%0A*Phone:* ${phoneNumber}%0A*Preferred Campus:* ${campus}%0A%0A*Message:*%0A${message || 'No additional message'}%0A%0A_Sent from Zawia Academy Website_`;
+
+            window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank');
+        });
+    </script>
+</body>
+</html>
